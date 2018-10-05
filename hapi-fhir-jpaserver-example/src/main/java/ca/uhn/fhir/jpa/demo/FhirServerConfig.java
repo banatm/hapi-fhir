@@ -37,6 +37,10 @@ public class FhirServerConfig extends BaseJavaConfigDstu3 {
 	@Bean()
 	public DaoConfig daoConfig() {
 		DaoConfig retVal = new DaoConfig();
+		
+		// Allow external references
+      retVal.setAllowExternalReferences(true);
+		
 		retVal.setAllowMultipleDelete(true);
 		return retVal;
 	}
